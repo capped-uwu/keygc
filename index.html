@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コピー可能なキー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="key-box">
+            <span class="key-label">key:</span>
+            <span class="key-copy" id="copy-text">gc-e3j5t38as</span>
+        </div>
+        <p class="info">
+            このリンクをシェアしてもいいですが、できればlinkvertise通してほしいなー...
+        </p>
+        <p class="warning">
+            あんまりにもbypassする人が多かったらこれ廃止します
+        </p>
+    </div>
+
+    <script>
+        document.querySelector('.key-copy').addEventListener('click', function() {
+            navigator.clipboard.writeText(this.textContent).then(function() {
+                alert('キーがコピーされました！');
+            });
+        });
+    </script>
+</body>
+</html>
